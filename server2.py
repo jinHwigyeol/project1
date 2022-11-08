@@ -66,7 +66,7 @@ while True:
         elif command.decode():
             with canvas(device) as draw:
                 draw.rectangle(device.bounding_box, outline="white", fill="black")
-                draw.text((40, 30), "{}".format(command), fill="white")
+                draw.text((40, 30), "{}".format(command.decode()), fill="white")
                 time.sleep(3)
         else:
             reply = "command {} not supported".format(cmd)
